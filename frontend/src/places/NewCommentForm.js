@@ -3,15 +3,12 @@ import { CurrentUser } from '../contexts/CurrentUser'
 
 function NewCommentForm({ place, onSubmit }) {
 
-    // const [authors, setAuthors] = useState([])
-
     const { currentUser } = useContext(CurrentUser)
 
     const [comment, setComment] = useState({
         content: '',
         stars: 3,
         rant: false,
-        // authorId: ''
     })
 
     // useEffect(() => {
@@ -34,8 +31,7 @@ function NewCommentForm({ place, onSubmit }) {
         setComment({
             content: '',
             stars: 3,
-            rant: false,
-            // authorId: authors[0]?.userId
+            rant: false
         })
     }
 
@@ -144,3 +140,4 @@ return (
 }
 
 export default NewCommentForm
+
